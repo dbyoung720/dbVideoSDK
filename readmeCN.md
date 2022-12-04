@@ -18,7 +18,10 @@ dbVideoSDK
 	10、支持视频涂鸦。可以直接在视频上画图，然后 RTMP 推送出去(可以用于远程教学、会诊)；
 	11、支持调整视频显示风格；如水平镜像、垂直镜像，等；
 	12、支持虚拟桌面；
-
+  13：Intel  支持 MP4 编码的显卡必须是 630 或者以上；
+  14：Nvidia 支持 MP4 编码的显卡必须是 GTX 1030 以上；
+  <https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new>
+    
 ## 二：示例：
 	VC  : VC2022       目录：VC
 	C#  : C#2022       目录：C#
