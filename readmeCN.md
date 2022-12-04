@@ -1,7 +1,7 @@
 dbVideoSDK
 =============
 
-# dbVideoSDK 高速视频图像处理
+# dbVideoSDK 高速视频处理
 
 - [English](readme.md)
 
