@@ -5,7 +5,7 @@ dbVideoSDK
 
 - [中文](readmeCN.md)
 
-## 一：Feature：
+## 一：Content：
 	01、Stable；
 	02、Efficient；Basically no performance loss. Consistent with the performance provided by hardware；
 	03、Supports all DirectShow video input devices；
