@@ -18,9 +18,9 @@ dbVideoSDK
 	10、Support video graffiti. You can draw pictures directly on the video, and then push them out by RTMP (which can be used for remote teaching and consultation)；
 	11、Support adjusting video display style; Such as horizontal mirror image, vertical mirror image, etc；
 	12、Support virtual desktop；
-  13：Intel  Supporting MP4 encoding must be 630 or above；
-  14：Nvidia Supporting MP4 encoding must be GTX 1030 above；
-  <https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new>
+	13、Intel  Supporting MP4 encoding must be 630 or above；
+	14、Nvidia Supporting MP4 encoding must be GTX 1030 above；
+	<https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new>
 
 ## 二：DEMO：
 	VC  : VC2022       Path：VC
