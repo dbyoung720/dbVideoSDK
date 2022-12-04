@@ -96,19 +96,6 @@ BEGIN_MESSAGE_MAP(CVCDlg, CDialogEx)
 END_MESSAGE_MAP()
 
 
-void Split(CString source, CStringArray& dest, CString division)
-{
-	dest.RemoveAll();
-	int pos = 0;
-	int pre_pos = 0;
-	while (-1 != pos) 
-	{
-		pre_pos = pos;
-		pos = source.Find(division, (pos + 1));
-		dest.Add(source.Mid(pre_pos, (pos - pre_pos)));
-	}
-}
-
 // CVCDlg 消息处理程序
 
 void CVCDlg::EnumVideoFormatList(int intIndex)
@@ -332,7 +319,7 @@ void CVCDlg::OnCbnSelchangeCombo3()
 char* TCHARToChar(TCHAR* pTchar)
 {
 	char* pChar = nullptr;
-	int nLen = wcslen(pTchar) + 1;
+	int nLen = (int)wcslen(pTchar) + 1;
 	pChar = new char[nLen * 2];
 	WideCharToMultiByte(CP_ACP, 0, pTchar, nLen, pChar, 2 * nLen, NULL, NULL);
 	return pChar;
