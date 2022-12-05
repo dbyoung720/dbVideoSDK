@@ -63,6 +63,7 @@ begin
   dbVideo_ShowStyle            := GetProcAddress(FhDll, 'dbVideo_ShowStyle');
   dbVideo_ShowLogo             := GetProcAddress(FhDll, 'dbVideo_ShowLogo');
   dbVideo_FaceCheck            := GetProcAddress(FhDll, 'dbVideo_FaceCheck');
+  
   dbVideo_Init;
 end;
 

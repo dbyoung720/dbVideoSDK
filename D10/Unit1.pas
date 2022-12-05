@@ -66,8 +66,6 @@ var
   strName : String;
   strValue: TArray<string>;
 begin
-  dbVideo_Init;
-
   strValue := String(AnsiString(dbVideo_EnumVideoInputDevice)).Split([';']);
   for strName In strValue do
     cbbVideoList.Items.Add(strName);
