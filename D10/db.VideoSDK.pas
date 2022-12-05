@@ -43,9 +43,9 @@ procedure InitVideoSDK;
 var
   strPath: String;
 begin
-  strPath := ExtractFilePath(Paramstr(0)) + 'dbVideo\dbVideo.dll';
-  SetDllDirectory(PChar(ExtractFilePath(strPath)));
-  FhDll := LoadLibrary(PChar(strPath));
+  strPath := ExtractFilePath(Paramstr(0)) + 'dbVideo';
+  SetDllDirectory(PChar(strPath));
+  FhDll := LoadLibrary('dbVideo.dll');
 
   dbVideo_Init                 := GetProcAddress(FhDll, 'dbVideo_Init');
   dbVideo_Free                 := GetProcAddress(FhDll, 'dbVideo_Free');
@@ -62,11 +62,13 @@ begin
   dbVideo_LiveRTMP             := GetProcAddress(FhDll, 'dbVideo_LiveRTMP');;
   dbVideo_ShowStyle            := GetProcAddress(FhDll, 'dbVideo_ShowStyle');
   dbVideo_ShowLogo             := GetProcAddress(FhDll, 'dbVideo_ShowLogo');
-  dbVideo_FaceCheck            := GetProcAddress(FhDll, 'dbVideo_FaceCheck');;
+  dbVideo_FaceCheck            := GetProcAddress(FhDll, 'dbVideo_FaceCheck');
+  dbVideo_Init;
 end;
 
 procedure FreeVideoSDK;
 begin
+  dbVideo_Free;
   FreeLibrary(FhDll);
 end;
 

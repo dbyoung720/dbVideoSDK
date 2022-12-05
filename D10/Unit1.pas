@@ -85,7 +85,6 @@ end;
 procedure TfrmVideo.FormDestroy(Sender: TObject);
 begin
   dbVideo_PreviewStop;
-  dbVideo_Free;
 end;
 
 procedure TfrmVideo.srchbxMP4SavePathInvokeSearch(Sender: TObject);
