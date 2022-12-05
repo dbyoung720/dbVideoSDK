@@ -9,7 +9,7 @@ dbVideoSDK
 	01、Stable；
 	02、Efficient；Basically no performance loss. Consistent with the performance provided by hardware；
 	03、Supports all DirectShow video input devices；
-	04、Supports x86、x64 platform；Win7、Win10 OS；
+	04、Supports x86、x64 platform；Win7、Win10 OS(Not test under Win11, it should be work normally)；
 	05、Support video preview, snap and image overlay；
 	06、Support HD snap(Screenshot and noise reduction)；
 	07、Support MP4 (H264) video save to files；
