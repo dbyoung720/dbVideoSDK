@@ -1,6 +1,6 @@
 unit db.VideoSDK;
 {
-  功能：dbyoung 视频 SDK
+  功能：High speed video processing
   作者：dbyoung@sina.com
   时间：2020-10-01
 }
