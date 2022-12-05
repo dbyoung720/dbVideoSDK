@@ -1,8 +1,9 @@
 unit db.VideoSDK;
 {
-  功能：High speed video processing
-  作者：dbyoung@sina.com
-  时间：2020-10-01
+  功能(Func)：High speed video processing
+  作者(Auth)：dbyoung@sina.com
+  时间(Time)：2020-10-01
+  版本(Vers): v2.0
 }
 
 interface
