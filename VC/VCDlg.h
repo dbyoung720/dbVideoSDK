@@ -50,6 +50,7 @@ public:
 	CButton m_chkLOGO;
 	CButton m_hVideo;
 	CButton m_DisplaySnapBmp;
+	CButton m_chkFace;
 	afx_msg void OnBnClickedButtonVideoPreview();
 	afx_msg void OnBnClickedButtonVideoStop();
 	afx_msg void OnBnClickedScrawl();
@@ -62,9 +63,10 @@ public:
 	afx_msg void OnSelChangeVideoDevice();
 	afx_msg void OnMenuSnapBmp();
 	afx_msg void OnMenuSnapBmpHD();
+	afx_msg void OnCbnSelchangeCombo3();
 private:
 	void EnumVideoFormatList(int intIndex);
 	void EnableUI(const bool Enabled);
 public:
-	afx_msg void OnCbnSelchangeCombo3();
+	afx_msg void OnBnClickedCheckface();
 };

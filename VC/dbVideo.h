@@ -40,6 +40,7 @@ typedef bool  (WINAPI* DBVIDEORECORDMP4)(const bool bRecord, const char* cSaveFi
 typedef bool  (WINAPI* DBVIDEOLIVERTMP) (const bool bLive,   const char* cRTMPLiveURL,  const int intHwAccType); DBVIDEOLIVERTMP  dbVideo_LiveRTMP;
 typedef void  (WINAPI* DBVIDEOSHOWSTYLE)(const int iStyle); DBVIDEOSHOWSTYLE dbVideo_ShowStyle;
 typedef void  (WINAPI* DBVIDEOSHOWLOGO)(const bool bShowLogo, const char* PngFileName); DBVIDEOSHOWLOGO dbVideo_ShowLogo;
+typedef void  (WINAPI* DBVIDEOFACECHECK)(const bool bFaceCheck); DBVIDEOFACECHECK dbVideo_FaceCheck;
 
 
 HINSTANCE m_hinstLib; 
@@ -77,6 +78,7 @@ void InitVideoSDK()
       dbVideo_LiveRTMP             = (DBVIDEOLIVERTMP)             GetProcAddress(m_hinstLib, "dbVideo_LiveRTMP");
       dbVideo_ShowStyle            = (DBVIDEOSHOWSTYLE)            GetProcAddress(m_hinstLib, "dbVideo_ShowStyle");
       dbVideo_ShowLogo             = (DBVIDEOSHOWLOGO)             GetProcAddress(m_hinstLib, "dbVideo_ShowLogo");
+      dbVideo_FaceCheck            = (DBVIDEOFACECHECK)            GetProcAddress(m_hinstLib, "dbVideo_FaceCheck");
 
       dbVideo_Init();
     }

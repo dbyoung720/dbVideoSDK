@@ -334,6 +334,24 @@ object frmVideo: TfrmVideo
       TabOrder = 13
       OnClick = btnClearTYClick
     end
+    object chkFace: TCheckBox
+      Left = 88
+      Top = 327
+      Width = 69
+      Height = 17
+      Caption = #20154#33080#26816#27979
+      Enabled = False
+      Font.Charset = GB2312_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = #23435#20307
+      Font.Style = []
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = False
+      TabOrder = 14
+      OnClick = chkFaceClick
+    end
   end
   object pmSnap: TPopupMenu
     AutoHotkeys = maManual

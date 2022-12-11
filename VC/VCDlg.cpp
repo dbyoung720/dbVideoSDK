@@ -74,6 +74,7 @@ void CVCDlg::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_CHECKLOGO, m_chkLOGO);
 	DDX_Control(pDX, IDC_BUTTON_VIDEO, m_hVideo);
 	DDX_Control(pDX, IDC_BUTTON_SNAPBMP, m_DisplaySnapBmp);
+	DDX_Control(pDX, IDC_CHECKFACE, m_chkFace);
 }
 
 BEGIN_MESSAGE_MAP(CVCDlg, CDialogEx)
@@ -93,6 +94,7 @@ BEGIN_MESSAGE_MAP(CVCDlg, CDialogEx)
 	ON_COMMAND(ID_SNAP_SNAP, &CVCDlg::OnMenuSnapBmp)
 	ON_COMMAND(ID_SNAP_SNAPHD, &CVCDlg::OnMenuSnapBmpHD)
 	ON_CBN_SELCHANGE(IDC_COMBO3, &CVCDlg::OnCbnSelchangeCombo3)
+	ON_BN_CLICKED(IDC_CHECKFACE, &CVCDlg::OnBnClickedCheckface)
 END_MESSAGE_MAP()
 
 
@@ -258,6 +260,7 @@ void CVCDlg::EnableUI(const bool Enabled)
 	m_ChkMP4.EnableWindow(Enabled);
 	m_chkRTMP.EnableWindow(Enabled);
 	m_chkLOGO.EnableWindow(Enabled);
+	m_chkFace.EnableWindow(Enabled);
 	m_edtMP4.EnableWindow(Enabled);
 	m_edtRTMP.EnableWindow(Enabled);
 	m_hVideo.Invalidate();
@@ -349,3 +352,10 @@ void CVCDlg::OnBnClickedChecklogo()
 	dbVideo_ShowLogo((bool)bCheck, NULL);
 }
 
+
+
+void CVCDlg::OnBnClickedCheckface()
+{
+	int bCheck = m_chkFace.GetCheck();
+	dbVideo_FaceCheck((bool)bCheck);
+}

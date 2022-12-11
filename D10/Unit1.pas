@@ -33,6 +33,7 @@ type
     pmSnap: TPopupMenu;
     N1: TMenuItem;
     mniHDSnap: TMenuItem;
+    chkFace: TCheckBox;
     procedure cbbVideoListChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure btnVideoPreviewStartClick(Sender: TObject);
@@ -48,6 +49,7 @@ type
     procedure srchbxMP4SavePathInvokeSearch(Sender: TObject);
     procedure btnClearTYClick(Sender: TObject);
     procedure mniHDSnapClick(Sender: TObject);
+    procedure chkFaceClick(Sender: TObject);
   private
     procedure EnableUI;
   end;
@@ -116,6 +118,11 @@ begin
   end;
 end;
 
+procedure TfrmVideo.chkFaceClick(Sender: TObject);
+begin
+  dbVideo_FaceCheck(chkFace.Checked);
+end;
+
 procedure TfrmVideo.chkLogoClick(Sender: TObject);
 begin
   dbVideo_ShowLogo(chkLogo.Checked, PAnsiChar(AnsiString(ExtractFilePath(ParamStr(0)) + 'logo.png')));
@@ -158,6 +165,7 @@ begin
   btnVideoAttr.Enabled      := not btnVideoPreviewStart.Enabled;
   srchbxMP4SavePath.Enabled := not btnVideoPreviewStart.Enabled;
   chkLogo.Enabled           := not btnVideoPreviewStart.Enabled;
+  chkFace.Enabled           := not btnVideoPreviewStart.Enabled;
 end;
 
 procedure TfrmVideo.btnVideoPreviewStartClick(Sender: TObject);
