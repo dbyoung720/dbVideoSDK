@@ -18,8 +18,9 @@ dbVideoSDK
 	10、支持视频涂鸦。可以直接在视频上画图，然后 RTMP 推送出去(可以用于远程教学、会诊)；
 	11、支持调整视频显示风格；如水平镜像、垂直镜像，等；
 	12、支持虚拟桌面；
-	13、Intel  支持 MP4 编码的显卡必须是 630 或者以上；
-	14、Nvidia 支持 MP4 编码的显卡必须是 GTX 1030 以上；
+	13、支持人脸检测(只支持 x64 平台；需要 OpenCV4.6、CUDA11.7 SDK；使用 GPU 加速，不占用 CPU资源。不影响帧率)；
+	14、Intel  支持 MP4 编码的显卡必须是 630 或者以上；
+	15、Nvidia 支持 MP4 编码的显卡必须是 GTX 1030 以上；
 	<https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new>
     
 ## 二：示例：
@@ -37,6 +38,6 @@ dbVideoSDK
 	07、SDK销毁：dbVideo_Free；
 
 ## 四：未来：
-	1、支持人脸检测、人脸识别、人脸登记；
+	1、支持人脸识别、人脸登记；
 	2、支持车牌识别；
 

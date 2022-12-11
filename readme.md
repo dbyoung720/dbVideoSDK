@@ -18,8 +18,9 @@ dbVideoSDK
 	10、Support video graffiti. You can draw pictures directly on the video, and then push them out by RTMP (which can be used for remote teaching and consultation)；
 	11、Support adjusting video display style; Such as horizontal mirror image, vertical mirror image, etc；
 	12、Support virtual desktop；
-	13、Intel  Supporting MP4 encode must be 630 or above；
-	14、Nvidia Supporting MP4 encode must be GTX 1030 above；
+	13、Support face detection(Only support x64 platform；Use OpenCV4.6、CUDA11.7 SDK；Use GPU to accelerate, not use CPU。Not affect frame rate)；
+	14、Intel  Supporting MP4 encode must be 630 or above；
+	15、Nvidia Supporting MP4 encode must be GTX 1030 above；
 	<https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new>
 
 ## 二：DEMO：
@@ -37,5 +38,5 @@ dbVideoSDK
 	07、Video SDK Free：dbVideo_Free；
 
 ## 四：Future：
-	1、Support face detection, face recognition and face registration；
+	1、Support face recognition and face registration；
 	2、Support license plate recognition；
