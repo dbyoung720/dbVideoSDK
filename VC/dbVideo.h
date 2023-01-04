@@ -58,8 +58,8 @@ void InitVideoSDK()
     nPos = strPath.ReverseFind('\\');
     strPath  = strPath.Left(nPos);
     strPath += subPath;
-
     SetDllDirectory(strPath);
+    
     m_hinstLib = LoadLibrary(TEXT("dbVideo.dll")); 
     if (m_hinstLib != NULL) 
     {

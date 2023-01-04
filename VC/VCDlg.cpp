@@ -352,8 +352,6 @@ void CVCDlg::OnBnClickedChecklogo()
 	dbVideo_ShowLogo((bool)bCheck, NULL);
 }
 
-
-
 void CVCDlg::OnBnClickedCheckface()
 {
 	int bCheck = m_chkFace.GetCheck();
