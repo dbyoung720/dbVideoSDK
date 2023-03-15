@@ -26,7 +26,7 @@ dbVideoSDK
 ## 二：DEMO：
 	VC  : VC2022       Path：VC
 	C#  : C#2022       Path：C#
-	D11 : Delphi10.4.2 Path：D10
+	D11 : Delphi11.3   Path：D11
 
 ## 三：Development：
 	01、Video SDK Init：dbVideo_Init；
