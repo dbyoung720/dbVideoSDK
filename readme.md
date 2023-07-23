@@ -40,3 +40,7 @@ dbVideoSDK
 ## 四：Future：
 	1、Support face recognition and face registration；
 	2、Support license plate recognition；
+
+## 五：exchange：
+	1、eMail  ：dbyoung@sina.com
+	2、QQGroup：763103109
