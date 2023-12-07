@@ -24,3 +24,5 @@ x64
 /C#/.vs
 /C#/bin
 /C#/obj
+/bin/Win32/C#.exe.config
+/bin/Win64/C#.exe.config
