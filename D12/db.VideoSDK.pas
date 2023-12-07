@@ -30,6 +30,7 @@ var
   dbVideo_RecordMP4   : function(const bRecord: Boolean; const strSaveFileName: PAnsiChar = nil; const iHwAccType: Integer = 0): Boolean; stdcall; { MP4 录制 }
   dbVideo_LiveRTMP    : function(const bLive: Boolean; const strUrl: PAnsiChar = nil; const iHwAccType: Integer = 0): Boolean; stdcall;            { RTMP 推流 }
   dbVideo_ShowStyle   : procedure(const intStyle: Integer = 0); stdcall;                                                                           { 视频显示风格 }
+  dbVideo_DeNoiseStyle: procedure(const intStyle: Integer = 0); stdcall;                                                                           { 视频降噪类型 }
   dbVideo_ShowLogo    : procedure(const bShowLogo: Boolean; const strPngFileName: PAnsiChar = nil); stdcall;                                       { 显示 PNG LOGO }
   dbVideo_FaceCheck   : procedure(const bFaceCheck: Boolean); stdcall;                                                                             { 人脸检测 }
 

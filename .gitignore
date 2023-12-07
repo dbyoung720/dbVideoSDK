@@ -21,3 +21,6 @@ snap
 /VC/VC.vcxproj.user
 /VC/VC.APS
 x64
+/C#/.vs
+/C#/bin
+/C#/obj
