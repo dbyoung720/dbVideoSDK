@@ -278,6 +278,12 @@ void CVCDlg::OnBnClickedButtonVideoPreview()
 void CVCDlg::OnBnClickedButtonVideoStop()
 {
 	dbVideo_PreviewStop();
+	m_DisplayEffect.SetCurSel(0);
+	m_MP4HardAccelType.SetCurSel(0);
+	m_ChkMP4.SetCheck(0);
+	m_chkRTMP.SetCheck(0);
+	m_chkLOGO.SetCheck(0);
+	m_chkFace.SetCheck(0);
 	EnableUI(false);
 }
 
