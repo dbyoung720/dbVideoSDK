@@ -2,7 +2,7 @@ object frmVideo: TfrmVideo
   Left = 0
   Top = 0
   Caption = 'dbVideoSDK v3.0'
-  ClientHeight = 666
+  ClientHeight = 690
   ClientWidth = 1085
   Color = clBtnFace
   Font.Charset = GB2312_CHARSET
@@ -15,7 +15,7 @@ object frmVideo: TfrmVideo
   OnDestroy = FormDestroy
   DesignSize = (
     1085
-    666)
+    690)
   TextHeight = 12
   object grpVideoList: TGroupBox
     Left = 8
@@ -70,7 +70,7 @@ object frmVideo: TfrmVideo
     Left = 299
     Top = 72
     Width = 778
-    Height = 586
+    Height = 610
     Anchors = [akLeft, akTop, akRight, akBottom]
     BevelOuter = bvNone
     Caption = 'pnlVideoPreview'
@@ -81,13 +81,13 @@ object frmVideo: TfrmVideo
     ParentCtl3D = False
     ParentDoubleBuffered = False
     ShowCaption = False
-    TabOrder = 2
+    TabOrder = 3
   end
   object grpFunc: TGroupBox
     Left = 8
     Top = 72
     Width = 285
-    Height = 586
+    Height = 610
     Anchors = [akLeft, akTop, akBottom]
     Ctl3D = True
     Font.Charset = GB2312_CHARSET
@@ -97,13 +97,13 @@ object frmVideo: TfrmVideo
     Font.Style = []
     ParentCtl3D = False
     ParentFont = False
-    TabOrder = 3
+    TabOrder = 2
     DesignSize = (
       285
-      586)
+      610)
     object lblHardAccel: TLabel
       Left = 12
-      Top = 202
+      Top = 250
       Width = 132
       Height = 12
       Caption = 'MP4 '#30828#20214#21152#36895#32534#30721#31867#22411#65306
@@ -117,6 +117,16 @@ object frmVideo: TfrmVideo
       Width = 60
       Height = 12
       Caption = #26174#31034#25928#26524#65306
+      Enabled = False
+      ParentShowHint = False
+      ShowHint = False
+    end
+    object lblDeNoise: TLabel
+      Left = 12
+      Top = 198
+      Width = 60
+      Height = 12
+      Caption = #38477#22122#26041#24335#65306
       Enabled = False
       ParentShowHint = False
       ShowHint = False
@@ -167,14 +177,14 @@ object frmVideo: TfrmVideo
       Enabled = False
       ParentShowHint = False
       ShowHint = False
-      TabOrder = 3
+      TabOrder = 4
       OnClick = btnVideoTYClick
     end
     object pnlSnap: TPanel
       Left = 12
-      Top = 368
+      Top = 400
       Width = 261
-      Height = 209
+      Height = 201
       Anchors = [akLeft, akBottom]
       BevelKind = bkFlat
       BevelOuter = bvNone
@@ -184,7 +194,7 @@ object frmVideo: TfrmVideo
       ParentBackground = False
       ParentCtl3D = False
       ShowCaption = False
-      TabOrder = 4
+      TabOrder = 15
     end
     object btnVideoAttr: TButton
       Left = 157
@@ -195,12 +205,12 @@ object frmVideo: TfrmVideo
       Enabled = False
       ParentShowHint = False
       ShowHint = False
-      TabOrder = 5
+      TabOrder = 3
       OnClick = btnVideoAttrClick
     end
     object chkMP4: TCheckBox
       Left = 12
-      Top = 263
+      Top = 309
       Width = 82
       Height = 17
       Caption = 'MP4 '#32534#30721#65306
@@ -213,12 +223,12 @@ object frmVideo: TfrmVideo
       ParentFont = False
       ParentShowHint = False
       ShowHint = False
-      TabOrder = 6
+      TabOrder = 10
       OnClick = chkMP4Click
     end
     object chkRTMP: TCheckBox
       Left = 12
-      Top = 293
+      Top = 339
       Width = 81
       Height = 17
       Caption = 'RTMP'#25512#27969#65306
@@ -231,12 +241,12 @@ object frmVideo: TfrmVideo
       ParentFont = False
       ParentShowHint = False
       ShowHint = False
-      TabOrder = 7
+      TabOrder = 12
       OnClick = chkRTMPClick
     end
     object srchbxMP4SavePath: TSearchBox
       Left = 88
-      Top = 261
+      Top = 307
       Width = 185
       Height = 20
       Enabled = False
@@ -248,12 +258,12 @@ object frmVideo: TfrmVideo
       ParentFont = False
       ParentShowHint = False
       ShowHint = False
-      TabOrder = 8
+      TabOrder = 9
       OnInvokeSearch = srchbxMP4SavePathInvokeSearch
     end
     object edtRTMPAddress: TEdit
       Left = 88
-      Top = 292
+      Top = 338
       Width = 185
       Height = 20
       Enabled = False
@@ -263,11 +273,11 @@ object frmVideo: TfrmVideo
       Font.Name = #23435#20307
       Font.Style = []
       ParentFont = False
-      TabOrder = 9
+      TabOrder = 11
     end
     object cbbHardAccel: TComboBox
       Left = 12
-      Top = 224
+      Top = 269
       Width = 261
       Height = 20
       Style = csDropDownList
@@ -275,7 +285,7 @@ object frmVideo: TfrmVideo
       ItemIndex = 0
       ParentShowHint = False
       ShowHint = False
-      TabOrder = 10
+      TabOrder = 8
       Text = #26080#30828#20214#21152#36895' (None)'
       Items.Strings = (
         #26080#30828#20214#21152#36895' (None)'
@@ -284,7 +294,7 @@ object frmVideo: TfrmVideo
     end
     object chkLogo: TCheckBox
       Left = 12
-      Top = 327
+      Top = 373
       Width = 69
       Height = 17
       Caption = #26174#31034'LOGO'
@@ -297,7 +307,7 @@ object frmVideo: TfrmVideo
       ParentFont = False
       ParentShowHint = False
       ShowHint = False
-      TabOrder = 11
+      TabOrder = 13
       OnClick = chkLogoClick
     end
     object cbbDisplayStyle: TComboBox
@@ -310,7 +320,7 @@ object frmVideo: TfrmVideo
       ItemIndex = 0
       ParentShowHint = False
       ShowHint = False
-      TabOrder = 12
+      TabOrder = 6
       Text = #26080
       OnChange = cbbDisplayStyleChange
       Items.Strings = (
@@ -329,12 +339,12 @@ object frmVideo: TfrmVideo
       Enabled = False
       ParentShowHint = False
       ShowHint = False
-      TabOrder = 13
+      TabOrder = 5
       OnClick = btnClearTYClick
     end
     object chkFace: TCheckBox
       Left = 88
-      Top = 327
+      Top = 373
       Width = 69
       Height = 17
       Caption = #20154#33080#26816#27979
@@ -349,6 +359,24 @@ object frmVideo: TfrmVideo
       ShowHint = False
       TabOrder = 14
       OnClick = chkFaceClick
+    end
+    object cbbDeNoiseStyle: TComboBox
+      Left = 12
+      Top = 216
+      Width = 261
+      Height = 20
+      Style = csDropDownList
+      Enabled = False
+      ItemIndex = 0
+      ParentShowHint = False
+      ShowHint = False
+      TabOrder = 7
+      Text = #26080
+      OnChange = cbbDeNoiseStyleChange
+      Items.Strings = (
+        #26080
+        #39640#28165#20302#24103'('#26080#37325#24433')'
+        #39640#28165#39640#24103'('#26377#37325#24433')')
     end
   end
   object pmSnap: TPopupMenu

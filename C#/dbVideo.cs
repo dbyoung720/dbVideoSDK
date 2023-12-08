@@ -43,6 +43,7 @@ namespace VideoSDKDemo
                 m_dbVideo_PreviewStart         = Invoke<Type_dbVideo_PreviewStart>("dbVideo_PreviewStart");
                 m_dbVideo_PreviewStop          = Invoke<Type_dbVideo_PreviewStop>("dbVideo_PreviewStop");
                 m_dbVideo_ShowStyle            = Invoke<Type_dbVideo_ShowStyle>("dbVideo_ShowStyle");
+                m_dbVideo_DeNoiseStyle         = Invoke<Type_dbVideo_DeNoiseStyle>("dbVideo_DeNoiseStyle");
                 m_dbVideo_SnapBmp              = Invoke<Type_dbVideo_SnapBmp>("dbVideo_SnapBmp");
                 m_dbVideo_ShowAttr             = Invoke<Type_dbVideo_ShowAttr>("dbVideo_ShowAttr");
                 m_dbVideo_TY                   = Invoke<Type_dbVideo_TY>("dbVideo_TY");
@@ -50,7 +51,6 @@ namespace VideoSDKDemo
                 m_dbVideo_GetNativeIP          = Invoke<Type_dbVideo_GetNativeIP>("dbVideo_GetNativeIP");
                 m_dbVideo_ShowLogo             = Invoke<Type_dbVideo_ShowLogo>("dbVideo_ShowLogo");
                 m_dbVideo_FaceCheck            = Invoke<Type_dbVideo_FaceCheck>("dbVideo_FaceCheck");
-                m_dbVideo_DeNoiseStyle         = Invoke<Type_dbVideo_DeNoiseStyle>("dbVideo_DeNoiseStyle");
                 m_dbVideo_RecordMP4            = Invoke<Type_dbVideo_RecordMP4>("dbVideo_RecordMP4");
                 m_dbVideo_LiveRTMP             = Invoke<Type_dbVideo_LiveRTMP>("dbVideo_LiveRTMP");
 
@@ -103,6 +103,10 @@ namespace VideoSDKDemo
         public delegate IntPtr Type_dbVideo_ShowStyle(int index);
         public Type_dbVideo_ShowStyle m_dbVideo_ShowStyle;
 
+        // 视频降噪风格
+        public delegate IntPtr Type_dbVideo_DeNoiseStyle(int index);
+        public Type_dbVideo_DeNoiseStyle m_dbVideo_DeNoiseStyle;
+
         // 视频截图
         public delegate bool Type_dbVideo_SnapBmp(IntPtr hbmp, bool bHD = false);
         public Type_dbVideo_SnapBmp m_dbVideo_SnapBmp;
@@ -130,10 +134,6 @@ namespace VideoSDKDemo
         // 人脸检测
         public delegate void Type_dbVideo_FaceCheck(bool bFaceCheck);
         public Type_dbVideo_FaceCheck m_dbVideo_FaceCheck;
-
-        // 视频显示风格
-        public delegate IntPtr Type_dbVideo_DeNoiseStyle(int index);
-        public Type_dbVideo_DeNoiseStyle m_dbVideo_DeNoiseStyle;
 
         // MP4 录制 
         public delegate bool Type_dbVideo_RecordMP4(bool bRecord, string pngfilename = "", int iHwAccType = 0);

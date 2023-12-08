@@ -34,6 +34,8 @@ type
     N1: TMenuItem;
     mniHDSnap: TMenuItem;
     chkFace: TCheckBox;
+    lblDeNoise: TLabel;
+    cbbDeNoiseStyle: TComboBox;
     procedure cbbVideoListChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure btnVideoPreviewStartClick(Sender: TObject);
@@ -50,6 +52,7 @@ type
     procedure btnClearTYClick(Sender: TObject);
     procedure mniHDSnapClick(Sender: TObject);
     procedure chkFaceClick(Sender: TObject);
+    procedure cbbDeNoiseStyleChange(Sender: TObject);
   private
     procedure EnableUI;
   end;
@@ -90,6 +93,11 @@ end;
 procedure TfrmVideo.srchbxMP4SavePathInvokeSearch(Sender: TObject);
 begin
   //
+end;
+
+procedure TfrmVideo.cbbDeNoiseStyleChange(Sender: TObject);
+begin
+  dbVideo_DeNoiseStyle(cbbDeNoiseStyle.ItemIndex);
 end;
 
 procedure TfrmVideo.cbbDisplayStyleChange(Sender: TObject);
@@ -164,6 +172,8 @@ begin
   srchbxMP4SavePath.Enabled := not btnVideoPreviewStart.Enabled;
   chkLogo.Enabled           := not btnVideoPreviewStart.Enabled;
   chkFace.Enabled           := not btnVideoPreviewStart.Enabled;
+  lblDeNoise.Enabled        := not btnVideoPreviewStart.Enabled;
+  cbbDeNoiseStyle.Enabled   := not btnVideoPreviewStart.Enabled;
 end;
 
 procedure TfrmVideo.btnVideoPreviewStartClick(Sender: TObject);
@@ -185,6 +195,7 @@ begin
   btnVideoPreviewStart.Enabled := not btnVideoPreviewStop.Enabled;
   EnableUI;
   cbbDisplayStyle.ItemIndex := 0;
+  cbbDeNoiseStyle.ItemIndex := 0;
   cbbHardAccel.ItemIndex    := 0;
   chkMP4.Checked            := False;
   chkRTMP.Checked           := False;

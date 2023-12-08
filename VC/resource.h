@@ -1,6 +1,6 @@
 ﻿//{{NO_DEPENDENCIES}}
-// Microsoft Visual C++ 生成的包含文件。
-// 供 VC.rc 使用
+// Microsoft Visual C++ generated include file.
+// Used by VC.rc
 //
 #define IDM_ABOUTBOX                    0x0010
 #define IDD_ABOUTBOX                    100
@@ -25,6 +25,7 @@
 #define IDC_EDIT2                       1014
 #define IDC_SPLIT1                      1015
 #define IDC_CHECKFACE                   1016
+#define IDC_COMBO5                      1017
 #define IDC_BUTTON_VIDEO                1020
 #define IDC_BUTTON_SNAPBMP              1021
 #define ID_SNAP_SNAP                    32771

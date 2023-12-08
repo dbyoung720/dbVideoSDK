@@ -63,9 +63,10 @@ begin
   dbVideo_RecordMP4            := GetProcAddress(FhDll, 'dbVideo_RecordMP4');;
   dbVideo_LiveRTMP             := GetProcAddress(FhDll, 'dbVideo_LiveRTMP');;
   dbVideo_ShowStyle            := GetProcAddress(FhDll, 'dbVideo_ShowStyle');
+  dbVideo_DeNoiseStyle         := GetProcAddress(FhDll, 'dbVideo_DeNoiseStyle');
   dbVideo_ShowLogo             := GetProcAddress(FhDll, 'dbVideo_ShowLogo');
   dbVideo_FaceCheck            := GetProcAddress(FhDll, 'dbVideo_FaceCheck');
-  
+
   dbVideo_Init;
 end;
 

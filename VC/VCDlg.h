@@ -42,6 +42,7 @@ public:
 	CButton m_Scrawl;
 	CButton m_ClearScrawl;
 	CComboBox m_DisplayEffect;
+	CComboBox m_DeNoiseStyle;
 	CComboBox m_MP4HardAccelType;
 	CButton m_ChkMP4;
 	CEdit m_edtMP4;
@@ -64,9 +65,9 @@ public:
 	afx_msg void OnMenuSnapBmp();
 	afx_msg void OnMenuSnapBmpHD();
 	afx_msg void OnCbnSelchangeCombo3();
+	afx_msg void OnBnClickedCheckface();
+	afx_msg void OnCbnSelchangeCombo5();
 private:
 	void EnumVideoFormatList(int intIndex);
 	void EnableUI(const bool Enabled);
-public:
-	afx_msg void OnBnClickedCheckface();
 };

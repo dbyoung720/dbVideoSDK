@@ -27,10 +27,6 @@ public:
 
 	protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV 支持
-
-// 实现
-protected:
-	DECLARE_MESSAGE_MAP()
 };
 
 CAboutDlg::CAboutDlg() : CDialogEx(IDD_ABOUTBOX)
@@ -41,10 +37,6 @@ void CAboutDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
 }
-
-BEGIN_MESSAGE_MAP(CAboutDlg, CDialogEx)
-END_MESSAGE_MAP()
-
 
 // CVCDlg 对话框
 
@@ -75,6 +67,7 @@ void CVCDlg::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_BUTTON_VIDEO, m_hVideo);
 	DDX_Control(pDX, IDC_BUTTON_SNAPBMP, m_DisplaySnapBmp);
 	DDX_Control(pDX, IDC_CHECKFACE, m_chkFace);
+	DDX_Control(pDX, IDC_COMBO5, m_DeNoiseStyle);
 }
 
 BEGIN_MESSAGE_MAP(CVCDlg, CDialogEx)
@@ -95,6 +88,7 @@ BEGIN_MESSAGE_MAP(CVCDlg, CDialogEx)
 	ON_COMMAND(ID_SNAP_SNAPHD, &CVCDlg::OnMenuSnapBmpHD)
 	ON_CBN_SELCHANGE(IDC_COMBO3, &CVCDlg::OnCbnSelchangeCombo3)
 	ON_BN_CLICKED(IDC_CHECKFACE, &CVCDlg::OnBnClickedCheckface)
+	ON_CBN_SELCHANGE(IDC_COMBO5, &CVCDlg::OnCbnSelchangeCombo5)
 END_MESSAGE_MAP()
 
 
@@ -152,6 +146,7 @@ BOOL CVCDlg::OnInitDialog()
 	CTime tme = CTime::GetTickCount();
 	m_SnapBmp.SetDropDownMenu(IDR_MENUSNAP, 0);
 	m_DisplayEffect.SetCurSel(0);
+	m_DeNoiseStyle.SetCurSel(0);
 	m_MP4HardAccelType.SetCurSel(0);
 	m_edtMP4.SetWindowText(tme.Format(_T("D:\\%Y%m%d%H%M.MP4")));
 	InitVideoSDK();
@@ -256,6 +251,7 @@ void CVCDlg::EnableUI(const bool Enabled)
 	m_Scrawl.EnableWindow(Enabled);
 	m_ClearScrawl.EnableWindow(Enabled);
 	m_DisplayEffect.EnableWindow(Enabled);
+	m_DeNoiseStyle.EnableWindow(Enabled);
 	m_MP4HardAccelType.EnableWindow(Enabled);
 	m_ChkMP4.EnableWindow(Enabled);
 	m_chkRTMP.EnableWindow(Enabled);
@@ -279,6 +275,7 @@ void CVCDlg::OnBnClickedButtonVideoStop()
 {
 	dbVideo_PreviewStop();
 	m_DisplayEffect.SetCurSel(0);
+	m_DeNoiseStyle.SetCurSel(0);
 	m_MP4HardAccelType.SetCurSel(0);
 	m_ChkMP4.SetCheck(0);
 	m_chkRTMP.SetCheck(0);
@@ -307,7 +304,6 @@ void CVCDlg::OnBnClickedAttr()
 	dbVideo_ShowAttr();
 }
 
-
 void CVCDlg::OnBnClickedScrawl()
 {
 	dbVideo_TY();
@@ -323,6 +319,12 @@ void CVCDlg::OnCbnSelchangeCombo3()
 {
 	int iIndex = m_DisplayEffect.GetCurSel();
 	dbVideo_ShowStyle(iIndex);
+}
+
+void CVCDlg::OnCbnSelchangeCombo5()
+{
+	int iIndex = m_DeNoiseStyle.GetCurSel();
+	dbVideo_DeNoiseStyle(iIndex);
 }
 
 char* TCHARToChar(TCHAR* pTchar)
@@ -363,3 +365,4 @@ void CVCDlg::OnBnClickedCheckface()
 	int bCheck = m_chkFace.GetCheck();
 	dbVideo_FaceCheck((bool)bCheck);
 }
+
