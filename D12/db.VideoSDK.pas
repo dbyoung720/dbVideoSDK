@@ -20,19 +20,19 @@ var
     intVideoFormatIndex ：视频输入格式索引；
     hVideo              ：视频显示窗体句柄；
   }
-  dbVideo_PreviewStart: function(const intVideoInputIndex: Integer; const intVideoFormatIndex: Integer; const hVideo: THandle): Boolean; stdcall;  { 视频预览开始 }
-  dbVideo_PreviewStop : function: Boolean; stdcall;                                                                                                { 视频预览结束 }
-  dbVideo_SnapBmp     : procedure(hbmp: THandle; const bHD: Boolean = False); stdcall;                                                             { 视频截图 }
-  dbVideo_ShowAttr    : procedure(); stdcall;                                                                                                      { 视频属性 }
-  dbVideo_TY          : procedure; stdcall;                                                                                                        { 视频涂鸦 }
-  dbVideo_TY_Clear    : procedure; stdcall;                                                                                                        { 清除视频涂鸦 }
-  dbVideo_GetNativeIP : function: PAnsiChar; stdcall;                                                                                              { 获取本机IP }
-  dbVideo_RecordMP4   : function(const bRecord: Boolean; const strSaveFileName: PAnsiChar = nil; const iHwAccType: Integer = 0): Boolean; stdcall; { MP4 录制 }
-  dbVideo_LiveRTMP    : function(const bLive: Boolean; const strUrl: PAnsiChar = nil; const iHwAccType: Integer = 0): Boolean; stdcall;            { RTMP 推流 }
-  dbVideo_ShowStyle   : procedure(const intStyle: Integer = 0); stdcall;                                                                           { 视频显示风格 }
-  dbVideo_DeNoiseStyle: procedure(const intStyle: Integer = 0); stdcall;                                                                           { 视频降噪类型 }
+  dbVideo_PreviewStart: function(const intVideoInputIndex: Integer; const intVideoFormatIndex: Integer; const hVideo: THandle): Boolean; stdcall;  { 视频预览开始  }
+  dbVideo_PreviewStop : function: Boolean; stdcall;                                                                                                { 视频预览结束  }
+  dbVideo_SnapBmp     : procedure(hbmp: THandle; const bHD: Boolean = False); stdcall;                                                             { 视频截图      }
+  dbVideo_ShowAttr    : procedure(); stdcall;                                                                                                      { 视频属性      }
+  dbVideo_TY          : procedure; stdcall;                                                                                                        { 视频涂鸦      }
+  dbVideo_TY_Clear    : procedure; stdcall;                                                                                                        { 清除视频涂鸦  }
+  dbVideo_GetNativeIP : function: PAnsiChar; stdcall;                                                                                              { 获取本机IP    }
+  dbVideo_RecordMP4   : function(const bRecord: Boolean; const strSaveFileName: PAnsiChar = nil; const iHwAccType: Integer = 0): Boolean; stdcall; { MP4 录制      }
+  dbVideo_LiveRTMP    : function(const bLive: Boolean; const strUrl: PAnsiChar = nil; const iHwAccType: Integer = 0): Boolean; stdcall;            { RTMP 推流     }
+  dbVideo_ShowStyle   : procedure(const intStyle: Integer = 0); stdcall;                                                                           { 视频显示风格  }
+  dbVideo_DeNoiseStyle: procedure(const intStyle: Integer = 0); stdcall;                                                                           { 视频降噪类型  }
   dbVideo_ShowLogo    : procedure(const bShowLogo: Boolean; const strPngFileName: PAnsiChar = nil); stdcall;                                       { 显示 PNG LOGO }
-  dbVideo_FaceCheck   : procedure(const bFaceCheck: Boolean); stdcall;                                                                             { 人脸检测 }
+  dbVideo_FaceCheck   : procedure(const bFaceCheck: Boolean); stdcall;                                                                             { 人脸检测      }
 
 implementation
 
