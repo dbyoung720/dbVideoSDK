@@ -10,8 +10,8 @@ interface
 
 var
   dbVideo_Init                : procedure; stdcall;                                         { 初始化 SDK }
-  dbVideo_Free                : procedure; stdcall;                                         { 卸载 SDK }
-  dbVideo_EnumVideoInputDevice: function: PAnsiChar; stdcall;                               { 枚举视频输入设备列表；名称以 ；分号隔开 }
+  dbVideo_Free                : procedure; stdcall;                                         { 卸载   SDK }
+  dbVideo_EnumVideoInputDevice: function: PAnsiChar; stdcall;                               { 枚举视频输入设备列表；              名称以 ；分号隔开 }
   dbVideo_EnumVideoFormat     : function(const intVideoIndex: Integer): PAnsiChar; stdcall; { 枚举视频输入设备支持的视频格式列表；名称以 ；分号隔开 }
   {
     视频预览开始
