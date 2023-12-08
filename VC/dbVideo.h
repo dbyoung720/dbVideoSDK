@@ -1,10 +1,9 @@
 /*
   功能(Func)：High speed video processing
   作者(Auth)：dbyoung@sina.com
-  时间(Time)：2020-10-01
-  版本(Vers): v2.0
+  时间(Time)：2023-10-01
+  版本(Vers): v3.0
 */
-
 #ifndef _DLL_DBVIDEO_H_
 #define _DLL_DBVIDEO_H_
 
@@ -78,9 +77,9 @@ void InitVideoSDK()
       dbVideo_RecordMP4            = (DBVIDEORECORDMP4)            GetProcAddress(m_hinstLib, "dbVideo_RecordMP4");
       dbVideo_LiveRTMP             = (DBVIDEOLIVERTMP)             GetProcAddress(m_hinstLib, "dbVideo_LiveRTMP");
       dbVideo_ShowStyle            = (DBVIDEOSHOWSTYLE)            GetProcAddress(m_hinstLib, "dbVideo_ShowStyle");
+      dbVideo_DeNoiseStyle         = (DBVIDEODENOISESTYLE)         GetProcAddress(m_hinstLib, "dbVideo_DeNoiseStyle");
       dbVideo_ShowLogo             = (DBVIDEOSHOWLOGO)             GetProcAddress(m_hinstLib, "dbVideo_ShowLogo");
       dbVideo_FaceCheck            = (DBVIDEOFACECHECK)            GetProcAddress(m_hinstLib, "dbVideo_FaceCheck");
-      dbVideo_DeNoiseStyle         = (DBVIDEODENOISESTYLE)         GetProcAddress(m_hinstLib, "dbVideo_DeNoiseStyle");
 
       dbVideo_Init();
     }

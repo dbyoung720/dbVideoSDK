@@ -1,3 +1,10 @@
+/*
+  功能(Func)：High speed video processing
+  作者(Auth)：dbyoung@sina.com
+  时间(Time)：2023-10-01
+  版本(Vers): v3.0
+*/
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
