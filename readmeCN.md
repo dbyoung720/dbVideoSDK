@@ -33,7 +33,7 @@ dbVideoSDK
 	02、获取视频设备列表：dbVideo_EnumVideoInputDevice；
 	03、选取视频支持分辨率：dbVideo_EnumVideoFormat；
 	04、开始视频预览：dbVideo_PreviewStart；
-	05、截图(dbVideo_SnapBmp)、MP4录制(dbVideo_RecordMP4)、RTMP推流(dbVideo_LiveRTMP)，等等操作......；
+	05、截图(dbVideo_SnapBmp)、MP4录制(dbVideo_RecordMP4)、RTMP推流(dbVideo_LiveRTMP)，降噪(dbVideo_DeNoiseStyle)，等等操作......；
 	06、停止视频预览：dbVideo_PreviewStop；
 	07、SDK销毁：dbVideo_Free；
 

@@ -33,7 +33,7 @@ dbVideoSDK
 	02、Get video device list：dbVideo_EnumVideoInputDevice；
 	03、Get video support resolution：dbVideo_EnumVideoFormat；
 	04、Start video preview：dbVideo_PreviewStart；
-	05、Snap(dbVideo_SnapBmp)、MP4 record(dbVideo_RecordMP4)、RTMP live(dbVideo_LiveRTMP)，And so on......；
+	05、Snap(dbVideo_SnapBmp)、MP4 record(dbVideo_RecordMP4)、RTMP live(dbVideo_LiveRTMP)，DeNoise(dbVideo_DeNoiseStyle)，And so on......；
 	06、Stop video preview：dbVideo_PreviewStop；
 	07、Video SDK Free：dbVideo_Free；
 
