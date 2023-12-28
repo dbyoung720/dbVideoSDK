@@ -32,7 +32,9 @@ var
   dbVideo_ShowStyle   : procedure(const intStyle: Integer = 0); stdcall;                                                                           { 视频显示风格  }
   dbVideo_DeNoiseStyle: procedure(const intStyle: Integer = 0); stdcall;                                                                           { 视频降噪类型  }
   dbVideo_ShowLogo    : procedure(const bShowLogo: Boolean; const strPngFileName: PAnsiChar = nil); stdcall;                                       { 显示 PNG LOGO }
-  dbVideo_FaceCheck   : procedure(const bFaceCheck: Boolean); stdcall;                                                                             { 人脸检测      }
+  dbVideo_CheckFace   : procedure(const bCheck: Boolean); stdcall;                                                                                 { 人脸检测      }
+  dbVideo_CheckROI    : procedure(const bCheck: Boolean); stdcall;                                                                                 { ROI 区域获取  }
+  dbVideo_CheckXR     : procedure(const bCheck: Boolean); stdcall;                                                                                 { XR 虚拟演播室 }
 
 implementation
 
@@ -65,7 +67,9 @@ begin
   dbVideo_ShowStyle            := GetProcAddress(FhDll, 'dbVideo_ShowStyle');
   dbVideo_DeNoiseStyle         := GetProcAddress(FhDll, 'dbVideo_DeNoiseStyle');
   dbVideo_ShowLogo             := GetProcAddress(FhDll, 'dbVideo_ShowLogo');
-  dbVideo_FaceCheck            := GetProcAddress(FhDll, 'dbVideo_FaceCheck');
+  dbVideo_CheckFace            := GetProcAddress(FhDll, 'dbVideo_CheckFace');
+  dbVideo_CheckROI             := GetProcAddress(FhDll, 'dbVideo_CheckROI');
+  dbVideo_CheckXR              := GetProcAddress(FhDll, 'dbVideo_CheckXR');
 
   dbVideo_Init;
 end;

@@ -363,6 +363,6 @@ void CVCDlg::OnBnClickedChecklogo()
 void CVCDlg::OnBnClickedCheckface()
 {
 	int bCheck = m_chkFace.GetCheck();
-	dbVideo_FaceCheck((bool)bCheck);
+	dbVideo_CheckFace((bool)bCheck);
 }
 

@@ -40,7 +40,9 @@ typedef bool  (WINAPI* DBVIDEOLIVERTMP) (const bool bLive,   const char* cRTMPLi
 typedef void  (WINAPI* DBVIDEOSHOWSTYLE)(const int iStyle); DBVIDEOSHOWSTYLE dbVideo_ShowStyle;
 typedef void  (WINAPI* DBVIDEODENOISESTYLE)(const int iStyle); DBVIDEODENOISESTYLE dbVideo_DeNoiseStyle;
 typedef void  (WINAPI* DBVIDEOSHOWLOGO)(const bool bShowLogo, const char* PngFileName); DBVIDEOSHOWLOGO dbVideo_ShowLogo;
-typedef void  (WINAPI* DBVIDEOFACECHECK)(const bool bFaceCheck); DBVIDEOFACECHECK dbVideo_FaceCheck;
+typedef void  (WINAPI* DBVIDEOCheckFace)(const bool bCheck); DBVIDEOCheckFace dbVideo_CheckFace;
+typedef void  (WINAPI* DBVIDEOCheckROI)(const bool bCheck); DBVIDEOCheckROI dbVideo_CheckROI;
+typedef void  (WINAPI* DBVIDEOCheckXR)(const bool bCheck); DBVIDEOCheckXR dbVideo_CheckXR;
 
 
 HINSTANCE m_hinstLib; 
@@ -79,7 +81,9 @@ void InitVideoSDK()
       dbVideo_ShowStyle            = (DBVIDEOSHOWSTYLE)            GetProcAddress(m_hinstLib, "dbVideo_ShowStyle");
       dbVideo_DeNoiseStyle         = (DBVIDEODENOISESTYLE)         GetProcAddress(m_hinstLib, "dbVideo_DeNoiseStyle");
       dbVideo_ShowLogo             = (DBVIDEOSHOWLOGO)             GetProcAddress(m_hinstLib, "dbVideo_ShowLogo");
-      dbVideo_FaceCheck            = (DBVIDEOFACECHECK)            GetProcAddress(m_hinstLib, "dbVideo_FaceCheck");
+      dbVideo_CheckFace            = (DBVIDEOCheckFace)            GetProcAddress(m_hinstLib, "dbVideo_CheckFace");
+      dbVideo_CheckROI             = (DBVIDEOCheckROI)             GetProcAddress(m_hinstLib, "dbVideo_CheckROI");
+      dbVideo_CheckXR              = (DBVIDEOCheckXR)              GetProcAddress(m_hinstLib, "dbVideo_CheckXR");
 
       dbVideo_Init();
     }

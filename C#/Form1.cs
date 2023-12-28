@@ -130,7 +130,7 @@ namespace C_
 
         private void chkFace_Click(object sender, EventArgs e)
         {
-            vsdk.m_dbVideo_FaceCheck(chkFace.Checked);
+            vsdk.m_dbVideo_CheckFace(chkFace.Checked);
         }
 
         private void cbbDeNoise_SelectedIndexChanged(object sender, EventArgs e)

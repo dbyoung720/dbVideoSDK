@@ -128,7 +128,7 @@ end;
 
 procedure TfrmVideo.chkFaceClick(Sender: TObject);
 begin
-  dbVideo_FaceCheck(chkFace.Checked);
+  dbVideo_CheckFace(chkFace.Checked);
 end;
 
 procedure TfrmVideo.chkLogoClick(Sender: TObject);

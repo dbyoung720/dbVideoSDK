@@ -57,7 +57,9 @@ namespace VideoSDKDemo
                 m_dbVideo_TY_Clear             = Invoke<Type_dbVideo_TY_Clear>("dbVideo_TY_Clear");
                 m_dbVideo_GetNativeIP          = Invoke<Type_dbVideo_GetNativeIP>("dbVideo_GetNativeIP");
                 m_dbVideo_ShowLogo             = Invoke<Type_dbVideo_ShowLogo>("dbVideo_ShowLogo");
-                m_dbVideo_FaceCheck            = Invoke<Type_dbVideo_FaceCheck>("dbVideo_FaceCheck");
+                m_dbVideo_CheckFace            = Invoke<Type_dbVideo_CheckFace>("dbVideo_CheckFace");
+                m_dbVideo_CheckROI             = Invoke<Type_dbVideo_CheckROI>("dbVideo_CheckROI");
+                m_dbVideo_CheckXR              = Invoke<Type_dbVideo_CheckXR>("dbVideo_CheckXR");
                 m_dbVideo_RecordMP4            = Invoke<Type_dbVideo_RecordMP4>("dbVideo_RecordMP4");
                 m_dbVideo_LiveRTMP             = Invoke<Type_dbVideo_LiveRTMP>("dbVideo_LiveRTMP");
 
@@ -139,8 +141,16 @@ namespace VideoSDKDemo
         public Type_dbVideo_ShowLogo m_dbVideo_ShowLogo;
 
         // 人脸检测
-        public delegate void Type_dbVideo_FaceCheck(bool bFaceCheck);
-        public Type_dbVideo_FaceCheck m_dbVideo_FaceCheck;
+        public delegate void Type_dbVideo_CheckFace(bool bCheck);
+        public Type_dbVideo_CheckFace m_dbVideo_CheckFace;
+
+        // ROI 感兴趣区域获取
+        public delegate void Type_dbVideo_CheckROI(bool bCheck);
+        public Type_dbVideo_CheckROI m_dbVideo_CheckROI;
+
+        // XR 虚拟演播室
+        public delegate void Type_dbVideo_CheckXR(bool bCheck);
+        public Type_dbVideo_CheckXR m_dbVideo_CheckXR;
 
         // MP4 录制 
         public delegate bool Type_dbVideo_RecordMP4(bool bRecord, string pngfilename = "", int iHwAccType = 0);
