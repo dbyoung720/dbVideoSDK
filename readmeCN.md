@@ -26,7 +26,7 @@ dbVideoSDK
 ## 二：示例：
 	VC  : VC2022       目录：VC
 	C#  : C#2022       目录：C#
-	D11 : Delphi12     目录：D12
+	D12 : Delphi12     目录：D12
 
 ## 三：开发流程：
 	01、初始化SDK：dbVideo_Init；
