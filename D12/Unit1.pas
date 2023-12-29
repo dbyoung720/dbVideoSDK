@@ -68,12 +68,10 @@ uses db.VideoSDK;
 
 procedure TfrmVideo.FormCreate(Sender: TObject);
 var
-  strName : String;
   strValue: TArray<string>;
 begin
   strValue := String(AnsiString(dbVideo_EnumVideoInputDevice)).Split([';']);
-  for strName In strValue do
-    cbbVideoList.Items.Add(strName);
+  cbbVideoList.Items.AddStrings(strValue);
 
   if cbbVideoList.Items.Count > 0 then
   begin
