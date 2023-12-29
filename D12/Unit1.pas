@@ -33,9 +33,10 @@ type
     pmSnap: TPopupMenu;
     N1: TMenuItem;
     mniHDSnap: TMenuItem;
-    chkFace: TCheckBox;
     lblDeNoise: TLabel;
     cbbDeNoiseStyle: TComboBox;
+    rgCheck: TRadioGroup;
+    lblCheck: TLabel;
     procedure cbbVideoListChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure btnVideoPreviewStartClick(Sender: TObject);
@@ -51,8 +52,8 @@ type
     procedure srchbxMP4SavePathInvokeSearch(Sender: TObject);
     procedure btnClearTYClick(Sender: TObject);
     procedure mniHDSnapClick(Sender: TObject);
-    procedure chkFaceClick(Sender: TObject);
     procedure cbbDeNoiseStyleChange(Sender: TObject);
+    procedure rgCheckClick(Sender: TObject);
   private
     procedure EnableUI;
   end;
@@ -120,11 +121,6 @@ begin
   end;
 end;
 
-procedure TfrmVideo.chkFaceClick(Sender: TObject);
-begin
-  dbVideo_CheckFace(chkFace.Checked);
-end;
-
 procedure TfrmVideo.chkLogoClick(Sender: TObject);
 begin
   dbVideo_ShowLogo(chkLogo.Checked, PAnsiChar(AnsiString(ExtractFilePath(ParamStr(0)) + 'logo.png')));
@@ -165,7 +161,8 @@ begin
   btnVideoAttr.Enabled      := not btnVideoPreviewStart.Enabled;
   srchbxMP4SavePath.Enabled := not btnVideoPreviewStart.Enabled;
   chkLogo.Enabled           := not btnVideoPreviewStart.Enabled;
-  chkFace.Enabled           := not btnVideoPreviewStart.Enabled;
+  lblCheck.Enabled          := not btnVideoPreviewStart.Enabled;
+  rgCheck.Enabled           := not btnVideoPreviewStart.Enabled;
   lblDeNoise.Enabled        := not btnVideoPreviewStart.Enabled;
   cbbDeNoiseStyle.Enabled   := not btnVideoPreviewStart.Enabled;
 end;
@@ -194,7 +191,9 @@ begin
   chkMP4.Checked            := False;
   chkRTMP.Checked           := False;
   chkLogo.Checked           := False;
-  chkFace.Checked           := False;
+  lblCheck.Enabled          := False;
+  rgCheck.Enabled           := False;
+  rgCheck.ItemIndex         := -1;
   pnlVideoPreview.Invalidate;
   pnlSnap.Invalidate;
 end;
@@ -207,6 +206,16 @@ end;
 procedure TfrmVideo.mniHDSnapClick(Sender: TObject);
 begin
   dbVideo_SnapBmp(pnlSnap.Handle, True);
+end;
+
+procedure TfrmVideo.rgCheckClick(Sender: TObject);
+begin
+  if rgCheck.ItemIndex = 0 then
+    dbVideo_CheckFace(True)
+  else if rgCheck.ItemIndex = 1 then
+    dbVideo_CheckROI(True)
+  else if rgCheck.ItemIndex = 2 then
+    dbVideo_CheckXR(True);
 end;
 
 procedure TfrmVideo.btnVideoTYClick(Sender: TObject);

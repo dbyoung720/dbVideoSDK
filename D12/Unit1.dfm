@@ -131,6 +131,14 @@ object frmVideo: TfrmVideo
       ParentShowHint = False
       ShowHint = False
     end
+    object lblCheck: TLabel
+      Left = 88
+      Top = 376
+      Width = 36
+      Height = 12
+      Caption = #26816#27979#65306
+      Enabled = False
+    end
     object btnVideoPreviewStart: TButton
       Left = 12
       Top = 16
@@ -182,7 +190,7 @@ object frmVideo: TfrmVideo
     end
     object pnlSnap: TPanel
       Left = 12
-      Top = 400
+      Top = 398
       Width = 261
       Height = 201
       Anchors = [akLeft, akBottom]
@@ -307,7 +315,7 @@ object frmVideo: TfrmVideo
       ParentFont = False
       ParentShowHint = False
       ShowHint = False
-      TabOrder = 13
+      TabOrder = 14
       OnClick = chkLogoClick
     end
     object cbbDisplayStyle: TComboBox
@@ -342,24 +350,6 @@ object frmVideo: TfrmVideo
       TabOrder = 5
       OnClick = btnClearTYClick
     end
-    object chkFace: TCheckBox
-      Left = 88
-      Top = 373
-      Width = 69
-      Height = 17
-      Caption = #20154#33080#26816#27979
-      Enabled = False
-      Font.Charset = GB2312_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -12
-      Font.Name = #23435#20307
-      Font.Style = []
-      ParentFont = False
-      ParentShowHint = False
-      ShowHint = False
-      TabOrder = 14
-      OnClick = chkFaceClick
-    end
     object cbbDeNoiseStyle: TComboBox
       Left = 12
       Top = 216
@@ -377,6 +367,23 @@ object frmVideo: TfrmVideo
         #26080
         #39640#28165#20302#24103'('#26080#37325#24433')'
         #39640#28165#39640#24103'('#26377#37325#24433')')
+    end
+    object rgCheck: TRadioGroup
+      Left = 124
+      Top = 362
+      Width = 154
+      Height = 30
+      Columns = 3
+      Enabled = False
+      Items.Strings = (
+        'Face'
+        'ROI'
+        'XR')
+      ParentShowHint = False
+      ShowFrame = False
+      ShowHint = True
+      TabOrder = 13
+      OnClick = rgCheckClick
     end
   end
   object pmSnap: TPopupMenu
