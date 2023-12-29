@@ -105,17 +105,13 @@ end;
 
 procedure TfrmVideo.cbbVideoListChange(Sender: TObject);
 var
-  strName : String;
   strValue: TArray<string>;
 begin
   btnVideoPreviewStart.Enabled := False;
   try
     cbbVideoFormat.Clear;
     strValue := string(AnsiString(dbVideo_EnumVideoFormat(cbbVideoList.ItemIndex))).Split([';']);
-    cbbVideoFormat.Items.BeginUpdate;
-    for strName In strValue do
-      cbbVideoFormat.Items.Add(strName);
-    cbbVideoFormat.Items.EndUpdate;
+    cbbVideoFormat.Items.AddStrings(strValue);
 
     if cbbVideoFormat.Items.Count > 0 then
       cbbVideoFormat.ItemIndex := 0;
